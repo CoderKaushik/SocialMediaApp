@@ -26,17 +26,7 @@ const app = express(); // Fix: Add parentheses
 app.use(express.json());
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-<<<<<<< HEAD
 app.use(cors()); // Fix: Correct typo
-=======
-app.use(cors(
-    {
-        origin: ["social-media-app-gray-nine.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-)); // Fix: Correct typo
->>>>>>> 999829c1141b97f37f6a0dba93d548a957a1a3b3
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" })); // Fix: Correct typo
 app.use(morgan("common"));
